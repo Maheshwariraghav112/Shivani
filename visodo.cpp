@@ -38,7 +38,11 @@ double getAbsoluteScale(int frame_id, int sequence_id, double z_cal)	{
   
   string line;
   int i = 0;
+		
+  // CHANGES!!!!!!! Here we have set the PATH of dataset where txt files are saved
+	
   ifstream myfile ("/home/raghav/Desktop/mono-vo-master/dataset/poses/00.txt");
+	
   double x =0, y=0, z = 0;
   double x_prev, y_prev, z_prev;
   if (myfile.is_open())
@@ -86,7 +90,9 @@ int main( int argc, char** argv )
   char filename1[200];
   char filename2[200];
 	// print("1");
- 
+	
+ // CHANGES..!!!! : PATH where all images captured are stored
+	
  sprintf(filename1, "/home/raghav/Desktop/mono-vo-master/dataset/sequences/00/images/1.jpg", 0);  
  sprintf(filename2, "/home/raghav/Desktop/mono-vo-master/dataset/sequences/00/images/1.jpg", 1);	
 
